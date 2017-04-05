@@ -33,6 +33,7 @@ class ImageOptim
 
       if optimized
         tmp = FSPath.temp_file_path(digest, @cache_dir)
+        FileUtils.chmod(@cache_dir_permissions, tmp) unless @cache_dir_permissions.nil?
         FileUtils.mv(optimized, tmp)
         tmp.chmod(0o666 & ~File.umask)
         tmp.rename(cached)
