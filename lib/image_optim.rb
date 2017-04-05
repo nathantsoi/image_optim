@@ -112,7 +112,7 @@ class ImageOptim
     return unless (workers = workers_for_image(original))
 
     optimized = @cache.fetch(original) do
-      Handler.for(original) do |handler|
+      Handler.for(self, original) do |handler|
         workers.each do |worker|
           handler.process do |src, dst|
             worker.optimize(src, dst)

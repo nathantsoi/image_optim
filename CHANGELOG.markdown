@@ -21,7 +21,7 @@
 ## v0.24.3 (2017-05-04)
 
 * Set mode of cache files to `0666 & ~umask`, related to [#147](https://github.com/toy/image_optim/issues/147) [@toy](https://github.com/toy)
-* Added `cache_dir_permissions` option to cache results [@nathantsoi](https://github.com/nathantsoi)
+* Added `cache_dir_mode` option to cache results [@nathantsoi](https://github.com/nathantsoi)
 
 ## v0.24.2 (2017-02-18)
 
