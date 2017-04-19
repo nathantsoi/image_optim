@@ -32,7 +32,7 @@ class ImageOptim
       is = ComparableCondition.is
 
       FAIL_CHECKS = [
-        [:pngcrush, is.between?('1.7.60', '1.7.65'), 'is known to produce '\
+        [:pngcrush, is.between?('1.7.60', '1.7.64'), 'is known to produce '\
               'broken pngs'],
         [:pngcrush, is == '1.7.80', 'loses one color in indexed images'],
         [:pngquant, is < '2.0', 'is not supported'],
